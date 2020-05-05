@@ -1,0 +1,89 @@
+// //修改输入框的全局样式
+// .el-form {
+//   .el-form-item {
+//     .el-form-item__content {
+//       .el-select {
+//         width: 100%;
+//       }
+//       .el-input {
+//         .el-input__inner {
+//           border-radius: 0;
+//           height: 30px;
+//           // width: 180px;
+//         }
+//       }
+//       .el-textarea {
+//         // width: 180px;
+//         .el-textarea__inner {
+//           border-radius: 0;
+//         }
+        
+//       }
+//     }
+//   }
+// }
+// 修改输入框的全局样式
+.el-form {
+  .el-form-item {
+    .el-form-item__content {
+      .el-select {
+        width: 100%;
+      }
+
+      .el-input {
+        .el-input__inner {
+          border-radius: 0;
+          height: 30px;
+        }
+      }
+
+      .el-date-editor {
+        width: 100%;
+      }
+
+      .el-date-editor {
+        height: 30px;
+        line-height: 30px;
+        border-radius: 0;
+
+        .el-input__icon {
+          line-height: 22px;
+        }
+
+        .el-range-separator {
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+// 修改按钮的全局样式
+.el-button {
+  padding: 0 15px;
+  border-radius: 0;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+
+//修改弹出框的全局样式
+.el-dialog {
+  .el-dialog__body {
+    padding: 20px 30px;
+    .el-form {
+      .el-col {
+        .el-form-item {
+          margin-bottom: 15px;
+          .el-form-item__content {
+            .el-input {
+              .el-input__inner {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
