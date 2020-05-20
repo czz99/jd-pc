@@ -7,6 +7,7 @@ import Vuex from 'vuex'
 import store from './store/index.js'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import Router from 'vue-router'
 import axios from 'axios'
 Vue.prototype.$axios = axios
 
@@ -36,3 +37,9 @@ router.beforeEach((to, from, next) => {
     next('/login')
   }
 })
+
+// 解决点击底部导航栏出现的路由报错
+const originalPush = Router.prototype.push
+Router.prototype.push = function push (location) {
+  return originalPush.call(this, location).catch(err => err)
+}

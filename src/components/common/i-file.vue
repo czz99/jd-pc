@@ -41,6 +41,13 @@ export default {
       this.$refs.file.click()
     },
     fileChange (event) {
+      // 判断文件是否是图片格式
+      let suffix = event.target.value.substring(event.target.value.lastIndexOf('.') + 1) // 获取文件的后缀名
+      if (suffix !== 'jpg' && suffix !== 'png' && suffix !== 'jpeg') {
+        this.$message.error('文件格式不正确')
+        return
+      }
+
       if (event.target.files.length) {
         let form = new FormData()
         let imageFile = document.getElementById('file').files[0]
